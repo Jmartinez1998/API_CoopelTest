@@ -21,6 +21,13 @@ namespace ApiCoppel.Controllers
             var res = await _MovementRepository.GetMovements();
             return Ok(res);
         }
+
+        [HttpGet("{id}/{month}")]
+        public async Task<IActionResult> Payment(int id, string month)
+        {
+            var res = await _MovementRepository.GetPayment(id, month);
+            return Ok(res);
+        }
         // POST: api/<MovementEmployeeController>/
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] DtoMovementEmployee movement)

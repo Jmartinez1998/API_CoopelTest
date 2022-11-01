@@ -7,5 +7,6 @@ namespace ApiCoppel.Repository.Interface
         Task<List<DtoMovementEmployee>> GetMovements();
         //Create
         Task<DtoMovementEmployee> NewMovement(DtoMovementEmployee movement);
+        Task<DtoCalculatePayment> GetPayment(int id, string Month);
     }
 }
