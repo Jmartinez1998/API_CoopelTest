@@ -13,8 +13,6 @@ namespace ApiCoppel.Data.DbModels
         public int Id { get; set; }
         [Required]
         public int EmployeeNumber { get; set; }
-        [Required]
-        [StringLength(maximumLength: 25, ErrorMessage = "El campo {0} no debe tener mas de {1} caracteres!")]
         public string Name { get; set; }
         public string LastName { get; set; }
         public int RoleId { get; set; }
