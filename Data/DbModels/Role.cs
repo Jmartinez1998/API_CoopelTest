@@ -10,5 +10,6 @@ namespace ApiCoppel.Data.DbModels
         public string RoleName { get; set; }
         public int Bonus { get; set; }
         public bool IsActive { get; set; }
+        public Employee Employee { get; set; }
     }
 }

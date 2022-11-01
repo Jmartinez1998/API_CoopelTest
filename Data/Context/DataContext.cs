@@ -1,6 +1,5 @@
 ﻿using ApiCoppel.Data.DbModels;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace ApiCoppel.Data.Context
 {
