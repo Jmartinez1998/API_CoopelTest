@@ -14,6 +14,11 @@ builder.Services.AddDbContext<DataContext>();
 builder.Services.AddScoped<IRole, RoleRepository>();
 builder.Services.AddScoped<IEmployee, EmployeeRepository>();
 builder.Services.AddScoped<IMovementEmployee, MovementEmployeeRepository>();
+//services cors
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 var app = builder.Build();
 
@@ -24,6 +29,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("corsapp");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
